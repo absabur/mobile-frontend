@@ -1,0 +1,61 @@
+/* compare.css */
+.table-container {
+  width: 100%;
+  position: relative;
+}
+
+.comparison-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.comparison-table th {
+  position: sticky;
+  top: 45px;
+  background-color: tomato;
+  font-weight: bold;
+  text-align: left;
+}
+
+.comparison-table td {
+  text-align: center;
+}
+
+.specification-column {
+  width: max-content;
+  text-align: left;
+  font-weight: bold;
+}
+
+.phone-column {
+  min-width: 150px;
+  width: max-content;
+}
+
+.phone-image {
+  width: 100%;
+  object-fit: contain;
+  height: 30vh;
+}
+
+.category-header {
+  background-color: tomato;
+  font-weight: bold;
+  color: white;
+}
+
+.spec-key {
+  font-weight: 600;
+  width: max-content;
+  text-align: left !important;
+}
+
+.icon {
+  margin-right: 5px;
+}

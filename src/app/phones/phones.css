@@ -1,0 +1,286 @@
+.phones-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phones {
+  background-color: aliceblue;
+  padding: 10px;
+  box-shadow: 0 0 3px black;
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-section {
+  background-color: aliceblue;
+  padding: 10px;
+  box-shadow: 0 0 3px black;
+  flex: 1;
+  overflow-y: scroll;
+  max-height: 90vh;
+  position: sticky;
+  top: 50px;
+}
+
+.filter-category {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px rgb(117, 117, 117);
+}
+
+/* ===================================== */
+.filter-section::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.filter-section::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.filter-section::-webkit-scrollbar-thumb {
+  background-color: #00ff95;
+  border: 2px solid #000000;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* ===================================== */
+
+.filter-inputs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 3px rgb(121, 121, 121);
+  position: relative;
+}
+.filter-inputs-section select,
+.filter-inputs-section input {
+  margin: 0;
+  background-color: white;
+}
+
+/* ======================== */
+.price-range-selector {
+  margin: 10px 0;
+}
+
+.range-slider {
+  position: relative;
+  height: 20px;
+}
+
+.range-input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background: transparent !important;
+  pointer-events: none; /* To allow both sliders to overlap */
+  z-index: 2;
+}
+
+.range-input::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 15px;
+  height: 15px;
+  background: #ff0055; /* Handle color */
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  -webkit-appearance: none;
+}
+
+.range-input::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #007bff !important; /* Handle color */
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.range-values {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.range-values div {
+  flex: 1;
+}
+
+.range-values div input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* =================================== */
+.filter-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: white;
+  position: relative;
+}
+
+.dropdown-content {
+  /* position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 2; */
+  background-color: aliceblue;
+  box-shadow: 0 0 10px #797979;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 150px;
+  transition: all 0.3s;
+}
+
+/* ========================== */
+
+.items-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.items-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.items-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.items-list::-webkit-scrollbar-thumb {
+  background-color: #00ff95;
+  border: 2px solid #000000;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* ====================================== */
+
+.dropdown-content input[type="text"] {
+  background-color: white;
+  width: 100%;
+  margin: 0 !important;
+  border-radius: 0;
+}
+
+.select-button {
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 0 2px rgb(87, 87, 87);
+  display: flex;
+}
+
+.active-button {
+  outline: 1px solid black;
+}
+
+.drop-arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.drop-arrow-down {
+  transform: rotate(180deg) translateY(5px);
+}
+
+.dropdown-content ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.dropdown-content ul li input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content .search-input {
+  position: sticky;
+  top: 0;
+}
+
+.selected-items {
+  width: 100%;
+}
+.selected-items ul {
+  margin-top: 5px;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.selected-item {
+  padding: 5px;
+  background-color: aliceblue;
+  box-shadow: 0 0 3px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  flex: 1 1 auto; /* Allow the element to grow and shrink */
+  min-width: min-content; /* Takes the minimum width required by its content */
+  max-width: 100%;
+}
+
+.remove-button {
+  cursor: pointer;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  border-radius: 100%;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  padding: 2px;
+  transition: all 0.3s ease;
+}
+
+.remove-button:hover {
+  box-shadow: 0 0 3px black;
+  scale: 1.2;
+  z-index: 2;
+}
+
+.clear-filter-btn {
+  position: sticky;
+  bottom: -9px;
+  width: 100%;
+  border-radius: 0;
+  font-size: 18px;
+  background-color: red;
+  color: white;
+}
