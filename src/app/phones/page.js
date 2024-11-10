@@ -8,6 +8,7 @@ import {
   getBrandAction,
   getFilterPhones,
   getSpecificationAction,
+  linkedin,
 } from "@/Store/Action";
 import BrandSelect from "@/Components/BrandSelect";
 import MultiSelectWithDropdown from "@/Components/MultiSelectWithSearch";
@@ -134,13 +135,13 @@ const Page = () => {
             key={phone._id}
           >
             <img
-              src={`${phone.images[0].url}`}
+              src={`${phone.images[0]?.url}`}
               alt={phone.name}
               style={{ height: "100px", width: "auto" }}
             />
             <h2>{phone.name}</h2>
             <p>
-              {phone.price[0].price} BDT ({phone.price[0].varient})
+              {phone.price[0]?.price} BDT ({phone.price[0]?.varient})
             </p>
           </Link>
         ))}

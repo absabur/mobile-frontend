@@ -11,7 +11,7 @@ const Phone = ({ phone }) => {
           </p>
           <div className="specs-top">
             <div className="phone-prices">
-              {phone.price.map((price) => {
+              {phone.price?.map((price) => {
                 return (
                   <div className="phone-price" key={price._id}>
                     <p>Varient: {price?.varient}</p>
@@ -25,7 +25,7 @@ const Phone = ({ phone }) => {
               })}
               <AddToCompare slug={phone.slug} />
             </div>
-            {phone.images.map((image) => (
+            {phone.images?.map((image) => (
               <img
                 key={image._id}
                 src={`${image.url}`}

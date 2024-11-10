@@ -114,6 +114,7 @@ export const addSpecificationFunc =
         }
       );
       const res = await response.json();
+      console.log(res);
 
       dispatch({
         type: "GET_SPECIFICATION",

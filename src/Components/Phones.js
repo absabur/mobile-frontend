@@ -26,7 +26,7 @@ const Phones = async () => {
             }}
           >
             <img
-              src={`${phone.images[0].url}`}
+              src={`${phone.images[0]?.url}`}
               alt={phone.name}
               style={{ height: "100px", width: "auto" }}
             />

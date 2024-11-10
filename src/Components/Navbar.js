@@ -26,7 +26,7 @@ const Navbar = () => {
   useEffect(() => {
     let count = localStorage.getItem("compare");
     count = JSON.parse(count);
-    count = count.length;
+    count = count?.length;
     setCompareCount(count);
     setIsAnimating(true);
     setTimeout(() => {

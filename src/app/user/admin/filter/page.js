@@ -20,8 +20,8 @@ export default function page() {
   const [paginations, setPaginations] = useState({
     currentPage: 1,
     itemsPerPage: 10,
-    totalItems: filters.length,
-    totalPages: Math.ceil(filters.length / 10),
+    totalItems: filters?.length,
+    totalPages: Math.ceil(filters?.length / 10),
   });
   const dispatch = useDispatch();
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function page() {
       currentPage: 1,
       itemsPerPage: 10,
       totalItems: filters.length,
-      totalPages: Math.ceil(filters.length / 10),
+      totalPages: Math.ceil(filters?.length / 10),
     });
   }, [filters]);
 
